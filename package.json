@@ -1,9 +1,13 @@
 {
-  "name": "@dashevo/insight-api",
-  "description": "A Dash blockchain REST and web socket API service for Dashcore Node.",
+  "name": "insight-api-pion",
+  "description": "A Pion blockchain REST and web socket API service for pioncore Node.",
   "version": "1.0.1",
-  "repository": "git://github.com/dashevo/insight-api.git",
+  "repository": "git://github.com/pioncoin/insight-api.git",
   "contributors": [
+    {
+      "name": "Bharath Balan",
+      "email": "bharath.balan@42hertz.com"
+    },
     {
       "name": "Gustavo Cortez",
       "email": "cmgustavo83@gmail.com"
@@ -38,19 +42,18 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/dashevo/insight-api/issues"
+    "url": "https://github.com/pioncoin/insight-api-pion/issues"
   },
-  "homepage": "https://github.com/dashevo/insight-api",
+  "homepage": "https://github.com/pioncoin/insight-api-pion",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "dash api",
+    "pion api",
     "blockchain api",
     "json",
-    "bitcore-dash",
-    "dashcore"
+    "pioncore"
   ],
   "engines": {
     "node": ">=0.12.0"
@@ -59,10 +62,10 @@
     "test": "NODE_ENV=test mocha -R spec --recursive"
   },
   "main": "lib",
-  "dashcoreNode": "lib",
+  "pioncoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "@dashevo/dashcore-lib": "^0.15.5",
+    "pioncore-lib": "pioncoin/pioncore-lib",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "=4.17.1",
