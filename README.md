@@ -71,9 +71,9 @@ This is a backend-only service. If you're looking for the web frontend applicati
 
 ```bash
 npm install -g pioncore-node@latest
-bitcore-node-dash create mynode
+pioncore-node create mynode
 cd mynode
-pioncore-node install insight-api
+pioncore-node install insight-api-pion
 pioncore-node start
 ```
 
@@ -83,11 +83,11 @@ The API endpoints will be available by default at: `http://localhost:3001/insigh
 
 - [Pioncore Node 4.x](https://github.com/pioncoin/pioncore-node)
 
-**Note:** You can use an existing Pion data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `dash.conf`, as well as a few other additional fields.
+**Note:** You can use an existing Pion data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `pion.conf`, as well as a few other additional fields.
 
 ### Query Rate Limit
 
-To protect the server, insight-api has a built it query rate limiter. It can be configurable in `bitcore-node.json` with:
+To protect the server, insight-api has a built it query rate limiter. It can be configurable in `pioncore-node.json` with:
 ``` json
   "servicesConfig": {
     "insight-api": {
@@ -578,7 +578,7 @@ GET method:
 Sample output:
 ```
 {
-  "result":"[[\"proposal\",{\"end_epoch\":1519848619,\"name\":\"ghijklmnopqrstuvwxyz01234567891519097947\",\"payment_address\":\"PLfXQLhPUKi8fEPJaP3qAM1yCjDjWGbY3Z\",\"payment_amount\":10,\"start_epoch\":1519097947,\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1519097947\"}]]",
+  "result":"[[\"proposal\",{\"end_epoch\":1519848619,\"name\":\"ghijklmnopqrstuvwxyz01234567891519097947\",\"payment_address\":\"PLfXQLhPUKi8fEPJaP3qAM1yCjDjWGbY3Z\",\"payment_amount\":10,\"start_epoch\":1519097947,\"type\":1,\"url\":\"https://www.pioncoin.org/p/test_proposal_1519097947\"}]]",
   "error":null,
   "id":78637
 }
